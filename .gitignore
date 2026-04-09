@@ -1,0 +1,27 @@
+# Ignore WordPress core
+wp-admin/
+wp-includes/
+index.php
+license.txt
+readme.html
+wp-*.php
+xmlrpc.php
+
+# Ignore uploads, plugins, upgrades
+wp-content/plugins/
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/languages/
+wp-content/mu-plugins/
+
+# Keep only your theme
+!wp-content/themes/unicamp/
+
+# Ignore default themes
+wp-content/themes/twentytwenty*/
+wp-content/themes/twentytwentyone/
+wp-content/themes/twentytwentytwo/
+
+# Local config files
+wp-config.php
+.htaccess

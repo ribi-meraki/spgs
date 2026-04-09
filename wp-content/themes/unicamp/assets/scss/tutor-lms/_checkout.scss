@@ -1,0 +1,50 @@
+/**
+ * Native checkout page by Tutor
+ */
+.tutor-checkout-page .tutor-checkout-course-title a {
+    color: $heading-color;
+    text-decoration: none;
+}
+
+.tutor-btn-link {
+    line-height: 26px;
+    padding: 0;
+    height: auto;
+    background: none !important;
+    border: 0;
+    color: $primary-color !important;
+
+    &:after {
+        height: 2px;
+        background: $primary-color;
+    }
+}
+
+.tutor-cart-page {
+    padding: 0;
+
+    .tutor-cart-course-item {
+        .tutor-cart-course-info {
+            li {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.tutor-checkout-page {
+    .tutor-form-control {
+        background-color: #fff;
+        border-color: #eee !important;
+    }
+
+    .tutor-apply-coupon-form {
+        input {
+            min-height: 42px;
+        }
+
+        button {
+            height: 42px;
+        }
+    }
+}

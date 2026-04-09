@@ -1,0 +1,78 @@
+.woocommerce-account {
+	.woocommerce-privacy-policy-text {
+		margin: 0 0 20px;
+	}
+}
+
+.woocommerce-form-wrap {
+	> h2 {
+		font-size: 20px;
+		line-height: 1.6;
+		margin: 0 0 18px;
+	}
+
+	.button {
+		width: 100%;
+	}
+}
+
+.woocommerce-form-has-background {
+	background: #fff;
+	box-shadow: 0 0 30px rgba(0, 0, 0, .05);
+	border: 1px solid #eee;
+	border-radius: 5px;
+	padding: 29px 50px 48px;
+}
+
+.woocommerce-form-login-wrap {
+	.lost_password {
+		a {
+			display: inline-block;
+			margin-bottom: 7px;
+		}
+	}
+}
+
+.password-input {
+    display: block;
+    position: relative;
+
+    .show-password-input {
+        @extend %FontAwesomeRegular;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: auto;
+        z-index: 1;
+        background: none !important;
+        box-shadow: none !important;
+        padding: 0 15px !important;
+        border: 0;
+        font-size: 14px;
+        color: $text-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &:before {
+            content: '\f06e';
+        }
+
+        &.display-password {
+            &:before {
+                content: '\f070';
+            }
+        }
+    }
+}
+
+.woocommerce-form-register-wrap {
+	padding: 29px 0 0;
+}
+
+// Center form if has only form.
+.page-main-content > article > .woocommerce > .woocommerce-form-wrap {
+	max-width: 570px;
+	margin: 0 auto;
+}
