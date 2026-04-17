@@ -107,4 +107,17 @@ function spgs_add_custom_overlay() {
     echo '<div class="overly" id="custom-overlay"></div>';
 }
 
+// function spgs_enqueue_fontawesome() {
+//     wp_enqueue_style(
+//         'font-awesome',
+//         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
+//     );
+// }
+// add_action('wp_enqueue_scripts', 'spgs_enqueue_fontawesome');
 
+function load_custom_map_script() {
+    if (is_front_page()) {
+        get_template_part('inc/map');
+    }
+}
+add_action('wp_footer', 'load_custom_map_script');
