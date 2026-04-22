@@ -27,6 +27,8 @@
 							<div class="header-right-inner-content">
 								<?php Unicamp_THA::instance()->header_right_top(); ?>
 
+								<a href="mailto:admissions@XXX" class="header-email">admissions@XXX</a>
+
 								<?php Unicamp_Header::instance()->print_search(); ?>
 
 								<?php Unicamp_Header::instance()->print_language_switcher(); ?>
@@ -54,7 +56,9 @@
 				<?php Unicamp_THA::instance()->header_wrap_bottom(); ?>
 			</div>
 		</div>
-
+			<div class="announcement-bar">
+				<p>Places for January 2027 entry are open</p>
+			</div>
 		<div class="header-bottom">
 			<div class="container">
 				<?php unicamp_load_template( 'navigation' ); ?>
@@ -62,3 +66,4 @@
 		</div>
 	</div>
 </header>
+

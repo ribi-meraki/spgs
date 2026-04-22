@@ -1,15 +1,73 @@
-<?php if (is_front_page()) : ?>
-
 <style>
-    #pac-input { z-index: 2; padding: 8px; border: 1px solid #585858; border-radius: 3px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; margin: 10px; width: 199px; margin-left: -3px; min-height: 40px;}
-    #current-location-btn{ right: initial !important; left: 400px; padding: 8px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; cursor: pointer; margin: 10px; color:rgb(0, 0, 0) min-height: 40px;}
+    #pac-input { z-index: 2; padding: 8px; border: 1px solid #585858; border-radius: 3px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; margin: 10px; width: 199px; margin-left: -3px; }
+    #current-location-btn{ right: initial !important; left: 400px; border: 1px solid #585858; border-radius: 3px; font-weight: 500; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; cursor: pointer; margin: 10px; color:rgb(0, 0, 0)}
     #map {   height: 700px; width: 100%;}
-    @media only screen and (max-width: 600px) {
-        #pac-input {position: absolute;  top: 10px; left: 200px !important; z-index: 2;  padding: 10px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);  font-size: 16px;  margin: 10px;  width: 150px; }
-        #current-location-btn{   position: absolute; top: 10px; left:0; z-index: 2; padding: 10px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; cursor: pointer;  margin-top: 70px;  margin-right: 14%; }
-        .gm-fullscreen-control{ top: 60px !important; }
+    /*@media only screen and (max-width: 600px) {*/
+    /*    #pac-input {position: absolute;  top: 10px; left: 200px !important; z-index: 2;  padding: 10px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);  font-size: 16px;  margin: 10px;  width: 150px; }*/
+    /*    #current-location-btn{   position: absolute; top: 10px; left:0; z-index: 2; padding: 10px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; cursor: pointer;  margin-top: 70px;  margin-right: 14%; }*/
+    /*    .gm-fullscreen-control{ top: 60px !important; }*/
+    /*}*/
+    /* Hide Map/Satellite toggle on mobile */
+    /*@media (max-width: 768px) {*/
+    /*    .gm-style-mtc {*/
+    /*        display: none !important;*/
+    /*    }*/
+    /*}*/
+    
+    @media only screen and (max-width: 768px) {
+
+    #pac-input {
+        position: absolute;
+        top: 10px !important;
+        right: 10px !important;
+        left: auto !important;
+        z-index: 2;
+        padding: 8px 10px;
+        border: 1px solid #585858;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        font-size: 13px;
+        margin: 0;
+        width: 130px;
+        box-sizing: border-box;
     }
-</style>
+
+    #current-location-btn {
+        position: absolute;
+        top: 10px !important;
+        right: 150px !important;
+        left: auto !important;
+        z-index: 2;
+        padding: 8px 10px;
+        border: 1px solid #585858;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        font-size: 13px;
+        cursor: pointer;
+        margin: 0;
+        width: 130px;
+        text-align: center;
+        white-space: nowrap;     /* ← stops text wrapping to 2 lines */
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .gm-fullscreen-control {
+        top: 55px !important;
+    }
+
+    .gm-style-mtc {
+        display: none !important;
+    }
+
+    #map {
+        height: 450px;
+    }
+}
+</style> 
+
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgxRQ7ftLwTNM6HNGTFi8fRErhOGyB2Fs&libraries=places,geometry&callback=initMap"></script>  
 <script>
         var singapore = { lat: 1.2833377739091532, lng: 103.77864361023468 };
@@ -77,7 +135,7 @@
             });
 
             var spgsIcon = {
-                url: 'http://localhost/spgs/wp-content/uploads/2026/01/SPGS-Singapore-Logo-1-1.png',
+                url: 'https://meraki-education.com/spgs/wp-content/uploads/2026/01/SPGS-Singapore-Logo-1-1.png',
                 scaledSize: new google.maps.Size(50, 50)
             };
 
@@ -88,13 +146,20 @@
             });
 
             var input = document.getElementById('pac-input');
+            input.style.minHeight = '40px';
+            input.style.height = '40px';
+            input.style.left = '203px';
             var searchBox = new google.maps.places.SearchBox(input);
             map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
             var currentLocationButton = document.createElement('button');
             currentLocationButton.textContent = 'Current Location';
             currentLocationButton.id = 'current-location-btn';
-            map.controls[google.maps.ControlPosition.TOP_LEFT].push(currentLocationButton);
+            
+            currentLocationButton.style.minHeight = '40px';
+            currentLocationButton.style.height = '40px';
+
+            map.controls[google.maps.ControlPosition.TOP_RIGHT].push(currentLocationButton);
 
             currentLocationButton.addEventListener('click', function(){
                 if (marker) {
@@ -180,5 +245,3 @@
 
     // window.addEventListener('load', initMap);
 </script>
-
-<?php endif; ?>

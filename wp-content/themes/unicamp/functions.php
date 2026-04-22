@@ -100,7 +100,8 @@ Unicamp_Init::instance()->initialize();
 require_once get_template_directory().'/inc/team.php';
 require_once get_template_directory() . '/inc/gallery.php';
 require_once get_template_directory().'/inc/age-calculator.php';
-
+require_once get_template_directory() . '/inc/academics.php';
+require_once get_template_directory() . '/inc/testimonial-slider.php';
 
 add_action('wp_body_open', 'spgs_add_custom_overlay');
 function spgs_add_custom_overlay() {
@@ -116,7 +117,8 @@ function spgs_add_custom_overlay() {
 // add_action('wp_enqueue_scripts', 'spgs_enqueue_fontawesome');
 
 function load_custom_map_script() {
-    if (is_front_page()) {
+    //if (is_front_page()) {
+    if (is_page(array(3436, 10644))) {
         get_template_part('inc/map');
     }
 }
