@@ -1,19 +1,7 @@
-<style>
+<!-- <style>
     #pac-input { z-index: 2; padding: 8px; border: 1px solid #585858; border-radius: 3px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; margin: 10px; width: 199px; margin-left: -3px; }
     #current-location-btn{ right: initial !important; left: 400px; border: 1px solid #585858; border-radius: 3px; font-weight: 500; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; cursor: pointer; margin: 10px; color:rgb(0, 0, 0)}
     #map {   height: 700px; width: 100%;}
-    /*@media only screen and (max-width: 600px) {*/
-    /*    #pac-input {position: absolute;  top: 10px; left: 200px !important; z-index: 2;  padding: 10px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);  font-size: 16px;  margin: 10px;  width: 150px; }*/
-    /*    #current-location-btn{   position: absolute; top: 10px; left:0; z-index: 2; padding: 10px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; cursor: pointer;  margin-top: 70px;  margin-right: 14%; }*/
-    /*    .gm-fullscreen-control{ top: 60px !important; }*/
-    /*}*/
-    /* Hide Map/Satellite toggle on mobile */
-    /*@media (max-width: 768px) {*/
-    /*    .gm-style-mtc {*/
-    /*        display: none !important;*/
-    /*    }*/
-    /*}*/
-    
     @media only screen and (max-width: 768px) {
 
     #pac-input {
@@ -66,7 +54,17 @@
         height: 450px;
     }
 }
-</style> 
+</style>  -->
+<style>
+    #pac-input { z-index: 2; padding: 8px; border: 1px solid #585858; border-radius: 3px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; margin: 10px; width: 199px; margin-left: -3px; }
+    #current-location-btn{ right: initial !important; left: 400px; padding: 8px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; cursor: pointer; margin: 10px; }
+    #map {   height: 550px; width: 100%;}
+    @media only screen and (max-width: 600px) {
+        #pac-input {position: absolute;  top: 10px; left: 200px !important; z-index: 2;  padding: 10px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);  font-size: 16px;  margin: 10px;  width: 150px; }
+        #current-location-btn{   position: absolute; top: 10px; left:0; z-index: 2; padding: 10px; border: 1px solid #585858; border-radius: 4px; background-color: #fff; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); font-size: 16px; cursor: pointer;  margin-top: 70px;  margin-right: 14%; }
+        .gm-fullscreen-control{ top: 60px !important; }
+    }
+</style>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgxRQ7ftLwTNM6HNGTFi8fRErhOGyB2Fs&libraries=places,geometry&callback=initMap"></script>  
 <script>

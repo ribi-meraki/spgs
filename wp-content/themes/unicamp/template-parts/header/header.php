@@ -56,9 +56,9 @@
 				<?php Unicamp_THA::instance()->header_wrap_bottom(); ?>
 			</div>
 		</div>
-			<div class="announcement-bar">
+			<!-- <div class="announcement-bar">
 				<p>Places for January 2027 entry are open</p>
-			</div>
+			</div> -->
 		<div class="header-bottom">
 			<div class="container">
 				<?php unicamp_load_template( 'navigation' ); ?>

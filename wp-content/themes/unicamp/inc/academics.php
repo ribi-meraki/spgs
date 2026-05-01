@@ -122,8 +122,8 @@ function spgs_academics_shortcode($atts){
                             <?php endif; ?>
 
                             <h5 class="spgs-academics-title rts__program--item--title h-abselute">
-                                <?php echo esc_html($item['title']); ?><br>
-                                <small><?php echo esc_html($item['subtitle']); ?></small>
+                                <?php echo esc_html($item['subtitle']); ?><br>
+                                <small><?php echo esc_html($item['title']); ?></small>
                             </h5>
 
                             <?php if (!empty($item['link'])): ?>

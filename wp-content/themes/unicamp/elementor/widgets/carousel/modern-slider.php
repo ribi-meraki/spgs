@@ -608,7 +608,7 @@ class Widget_Modern_Slider extends Carousel_Base {
 					$title_html = '<a ' . $this->get_render_attribute_string( $item_title_link_key ) . '>' . $title_html . '</a>';
 				}
 
-				$title_html = '<h3 class="title">' . $title_html . '</h3>';
+				$title_html = '<h1 class="title">' . $title_html . '</h1>';
 			}
 			?>
 			<div <?php $this->print_attributes_string( $item_key ); ?>>
@@ -623,7 +623,7 @@ class Widget_Modern_Slider extends Carousel_Base {
 									<div class="slide-layer">
 										<?php if ( '' !== $slide['sub_title'] ) : ?>
 											<div class="sub-title-wrap">
-												<h4 class="sub-title"><?php echo wp_kses( $slide['sub_title'], 'unicamp-default' ); ?></h4>
+												<strong class="sub-title"><?php echo wp_kses( $slide['sub_title'], 'unicamp-default' ); ?></strong>
 											</div>
 										<?php endif; ?>
 
@@ -635,19 +635,16 @@ class Widget_Modern_Slider extends Carousel_Base {
 
 										<?php if ( ! empty( $slide['description'] ) ) : ?>
 											<div class="description-wrap">
-												<div
-													class="description"><?php echo esc_html( $slide['description'] ); ?></div>
+												<p class="description"><?php echo esc_html( $slide['description'] ); ?></p>
 											</div>
 										<?php endif; ?>
 
 										<?php if ( ! empty( $slide['button_text'] ) && ! empty( $slide['button_link']['url'] ) ) : ?>
 											<div class="button-wrap tm-button-wrapper">
-												<a <?php $this->print_attributes_string( $item_button_key ); ?>>
-													<div class="button-content-wrapper">
+												<a href="#" <?php $this->print_attributes_string( $item_button_key ); ?>>
 														<span class="button-text">
 															<?php echo esc_html( $slide['button_text'] ); ?>
 														</span>
-													</div>
 												</a>
 											</div>
 										<?php endif; ?>
@@ -658,7 +655,7 @@ class Widget_Modern_Slider extends Carousel_Base {
 								<?php if ( '' !== $slide['sub_title'] ) : ?>
 									<div class="slide-layer-wrap sub-title-wrap">
 										<div class="slide-layer">
-											<h4 class="sub-title"><?php echo wp_kses( $slide['sub_title'], 'unicamp-default' ); ?></h4>
+											<strong class="sub-title"><?php echo wp_kses( $slide['sub_title'], 'unicamp-default' ); ?></strong>
 										</div>
 									</div>
 								<?php endif; ?>
@@ -674,8 +671,8 @@ class Widget_Modern_Slider extends Carousel_Base {
 								<?php if ( ! empty( $slide['description'] ) ) : ?>
 									<div class="slide-layer-wrap description-wrap">
 										<div class="slide-layer">
-											<div
-												class="description"><?php echo esc_html( $slide['description'] ); ?></div>
+											<p
+												class="description"><?php echo esc_html( $slide['description'] ); ?></p>
 										</div>
 									</div>
 								<?php endif; ?>
@@ -684,12 +681,10 @@ class Widget_Modern_Slider extends Carousel_Base {
 									<div class="slide-layer-wrap button-wrap">
 										<div class="slide-layer">
 											<div class="tm-button-wrapper">
-												<a <?php $this->print_attributes_string( $item_button_key ); ?>>
-													<div class="button-content-wrapper">
+												<a href="#" <?php $this->print_attributes_string( $item_button_key ); ?>>
 														<span class="button-text">
 															<?php echo esc_html( $slide['button_text'] ); ?>
 														</span>
-													</div>
 												</a>
 											</div>
 										</div>
